@@ -207,7 +207,7 @@ footer{background:var(--dark);color:#fff;padding:3rem 2rem 1.5rem}
       </div>
     </div>
     <div class="hero-right">
-      <img class="hero-product-img" src="https://loremflickr.com/400/500/woman,fashion,model,dress?lock=99" alt="Fashion"/>
+      <img class="hero-product-img" src="https://cdn.dummyjson.com/products/images/womens-dresses/6/1.webp" alt="Fashion" onerror="this.onerror=null;this.src='https://cdn.dummyjson.com/products/images/womens-dresses/1/1.webp'"/>
     </div>
   </div>
   <div class="category-strip">
@@ -333,7 +333,7 @@ footer{background:var(--dark);color:#fff;padding:3rem 2rem 1.5rem}
             <span class="order-status status-delivered">Delivered ✓</span>
           </div>
           <div class="order-item-mini">
-            <img src="https://loremflickr.com/100/110/woman,kurta,fashion,colorful?lock=101" alt=""/>
+            <img src="https://cdn.dummyjson.com/products/images/womens-dresses/1/thumbnail.webp" alt="" style="width:50px;height:55px;object-fit:cover;border-radius:6px"/>
             <div><h4>Floral Kurti Set – Size M</h4><p>Qty: 1 | ₹ 1,299</p></div>
           </div>
         </div>
@@ -346,7 +346,7 @@ footer{background:var(--dark);color:#fff;padding:3rem 2rem 1.5rem}
             <span class="order-status status-shipped">Shipped 🚚</span>
           </div>
           <div class="order-item-mini">
-            <img src="https://loremflickr.com/100/110/man,trousers,casual,pants?lock=103" alt=""/>
+            <img src="https://cdn.dummyjson.com/products/images/mens-shirts/1/thumbnail.webp" alt="" style="width:50px;height:55px;object-fit:cover;border-radius:6px"/>
             <div><h4>Slim Fit Chinos – Navy Blue</h4><p>Qty: 2 | ₹ 2,198</p></div>
           </div>
         </div>
@@ -359,7 +359,7 @@ footer{background:var(--dark);color:#fff;padding:3rem 2rem 1.5rem}
             <span class="order-status status-processing">Processing ⏳</span>
           </div>
           <div class="order-item-mini">
-            <img src="https://loremflickr.com/100/110/girl,dress,party,child?lock=105" alt=""/>
+            <img src="https://cdn.dummyjson.com/products/images/womens-dresses/3/thumbnail.webp" alt="" style="width:50px;height:55px;object-fit:cover;border-radius:6px"/>
             <div><h4>Kids Party Dress – Pink</h4><p>Qty: 1 | ₹ 899</p></div>
           </div>
         </div>
@@ -410,19 +410,20 @@ footer{background:var(--dark);color:#fff;padding:3rem 2rem 1.5rem}
 </a>
 
 <script>
+const CDN='https://cdn.dummyjson.com/products/images';
 const products=[
-  {id:1, name:'Floral Kurti Set',      cat:'women',       price:1299, original:1999, kw:'woman,kurta,fashion,colorful',    badge:'35% OFF'},
-  {id:2, name:'Embroidered Saree',     cat:'women',       price:2499, original:3999, kw:'woman,saree,ethnic,fashion',      badge:'38% OFF'},
-  {id:3, name:'Slim Fit Chinos',       cat:'men',         price:1099, original:1799, kw:'man,trousers,casual,pants',       badge:'40% OFF'},
-  {id:4, name:'Classic Oxford Shirt',  cat:'men',         price:899,  original:1299, kw:'man,shirt,formal,white',          badge:'30% OFF'},
-  {id:5, name:'Kids Party Dress',      cat:'kids',        price:899,  original:1499, kw:'girl,dress,party,child',          badge:'40% OFF'},
-  {id:6, name:'Boys Denim Jacket',     cat:'kids',        price:1199, original:1899, kw:'boy,jacket,child,denim',          badge:'37% OFF'},
-  {id:7, name:'Boho Maxi Dress',       cat:'women',       price:1599, original:2499, kw:'woman,dress,boho,fashion',        badge:'36% OFF'},
-  {id:8, name:'Ethnic Sherwani',       cat:'men',         price:3499, original:5499, kw:'man,sherwani,suit,ethnic',        badge:'36% OFF'},
-  {id:9, name:'Leather Tote Bag',      cat:'accessories', price:1299, original:1999, kw:'handbag,leather,bag,tote',        badge:'35% OFF'},
-  {id:10,name:'Silver Jhumka Set',     cat:'accessories', price:599,  original:999,  kw:'earrings,jewelry,silver,fashion', badge:'40% OFF'},
-  {id:11,name:'Casual Joggers',        cat:'men',         price:799,  original:1299, kw:'joggers,sporty,casual,pants',     badge:'38% OFF'},
-  {id:12,name:'Girls Lehenga Set',     cat:'kids',        price:1799, original:2999, kw:'girl,lehenga,ethnic,dress',       badge:'40% OFF'}
+  {id:1, name:'Floral Kurti Set',      cat:'women',       price:1299, original:1999, path:'womens-dresses/1',    badge:'35% OFF'},
+  {id:2, name:'Embroidered Saree',     cat:'women',       price:2499, original:3999, path:'womens-dresses/2',    badge:'38% OFF'},
+  {id:3, name:'Slim Fit Chinos',       cat:'men',         price:1099, original:1799, path:'mens-shirts/1',       badge:'40% OFF'},
+  {id:4, name:'Classic Oxford Shirt',  cat:'men',         price:899,  original:1299, path:'mens-shirts/2',       badge:'30% OFF'},
+  {id:5, name:'Kids Party Dress',      cat:'kids',        price:899,  original:1499, path:'womens-dresses/3',    badge:'40% OFF'},
+  {id:6, name:'Boys Denim Jacket',     cat:'kids',        price:1199, original:1899, path:'tops/1',              badge:'37% OFF'},
+  {id:7, name:'Boho Maxi Dress',       cat:'women',       price:1599, original:2499, path:'womens-dresses/4',    badge:'36% OFF'},
+  {id:8, name:'Ethnic Sherwani',       cat:'men',         price:3499, original:5499, path:'mens-shirts/3',       badge:'36% OFF'},
+  {id:9, name:'Leather Tote Bag',      cat:'accessories', price:1299, original:1999, path:'womens-bags/1',       badge:'35% OFF'},
+  {id:10,name:'Silver Jhumka Set',     cat:'accessories', price:599,  original:999,  path:'womens-jewellery/1',  badge:'40% OFF'},
+  {id:11,name:'Casual Joggers',        cat:'men',         price:799,  original:1299, path:'mens-shirts/4',       badge:'38% OFF'},
+  {id:12,name:'Girls Lehenga Set',     cat:'kids',        price:1799, original:2999, path:'womens-dresses/5',    badge:'40% OFF'}
 ];
 
 let cart=[];
@@ -432,7 +433,7 @@ function productCard(p,small=false){
   const pct=Math.round((1-p.price/p.original)*100);
   return `<div class="product-card">
     <div class="product-img-wrap">
-      <img src="https://loremflickr.com/300/320/${p.kw}?lock=${p.id+100}" alt="${p.name}" loading="lazy"/>
+      <img src="${CDN}/${p.path}/1.webp" alt="${p.name}" loading="lazy" style="width:100%;height:100%;object-fit:cover" onerror="this.onerror=null;this.src='${CDN}/${p.path}/thumbnail.webp'"/>
       <span class="product-badge">${p.badge}</span>
       <div class="wishlist-btn">♡</div>
     </div>
@@ -483,7 +484,7 @@ function updateCartUI(){
     document.getElementById('cartFooter').style.display='none';
   }else{
     ci.innerHTML=cart.map(i=>`<div class="cart-item">
-      <img src="https://loremflickr.com/120/130/${i.kw}?lock=${i.id+100}" alt="${i.name}"/>
+      <img src="${CDN}/${i.path}/thumbnail.webp" alt="${i.name}" style="width:60px;height:70px;object-fit:cover;border-radius:6px"/>
       <div class="cart-item-info">
         <h4>${i.name}</h4>
         <p>₹${i.price.toLocaleString()} each</p>

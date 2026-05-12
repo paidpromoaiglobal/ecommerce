@@ -207,7 +207,7 @@ footer{background:var(--dark);color:#fff;padding:3rem 2rem 1.5rem}
       </div>
     </div>
     <div class="hero-right">
-      <img class="hero-product-img" src="https://cdn.dummyjson.com/products/images/womens-dresses/6/1.webp" alt="Fashion" onerror="this.onerror=null;this.src='https://cdn.dummyjson.com/products/images/womens-dresses/1/1.webp'"/>
+      <img class="hero-product-img" src="https://picsum.photos/seed/trendzone-hero/350/450" alt="Fashion"/>
     </div>
   </div>
   <div class="category-strip">
@@ -333,7 +333,7 @@ footer{background:var(--dark);color:#fff;padding:3rem 2rem 1.5rem}
             <span class="order-status status-delivered">Delivered ✓</span>
           </div>
           <div class="order-item-mini">
-            <img src="https://cdn.dummyjson.com/products/images/womens-dresses/1/thumbnail.webp" alt="" style="width:50px;height:55px;object-fit:cover;border-radius:6px"/>
+            <img src="https://picsum.photos/seed/tz-ord1/50/55" alt="" style="width:50px;height:55px;object-fit:cover;border-radius:6px"/>
             <div><h4>Floral Kurti Set – Size M</h4><p>Qty: 1 | ₹ 1,299</p></div>
           </div>
         </div>
@@ -346,7 +346,7 @@ footer{background:var(--dark);color:#fff;padding:3rem 2rem 1.5rem}
             <span class="order-status status-shipped">Shipped 🚚</span>
           </div>
           <div class="order-item-mini">
-            <img src="https://cdn.dummyjson.com/products/images/mens-shirts/1/thumbnail.webp" alt="" style="width:50px;height:55px;object-fit:cover;border-radius:6px"/>
+            <img src="https://picsum.photos/seed/tz-ord2/50/55" alt="" style="width:50px;height:55px;object-fit:cover;border-radius:6px"/>
             <div><h4>Slim Fit Chinos – Navy Blue</h4><p>Qty: 2 | ₹ 2,198</p></div>
           </div>
         </div>
@@ -359,7 +359,7 @@ footer{background:var(--dark);color:#fff;padding:3rem 2rem 1.5rem}
             <span class="order-status status-processing">Processing ⏳</span>
           </div>
           <div class="order-item-mini">
-            <img src="https://cdn.dummyjson.com/products/images/womens-dresses/3/thumbnail.webp" alt="" style="width:50px;height:55px;object-fit:cover;border-radius:6px"/>
+            <img src="https://picsum.photos/seed/tz-ord3/50/55" alt="" style="width:50px;height:55px;object-fit:cover;border-radius:6px"/>
             <div><h4>Kids Party Dress – Pink</h4><p>Qty: 1 | ₹ 899</p></div>
           </div>
         </div>
@@ -410,30 +410,33 @@ footer{background:var(--dark);color:#fff;padding:3rem 2rem 1.5rem}
 </a>
 
 <script>
-const CDN='https://cdn.dummyjson.com/products/images';
 const products=[
-  {id:1, name:'Floral Kurti Set',      cat:'women',       price:1299, original:1999, path:'womens-dresses/1',    badge:'35% OFF'},
-  {id:2, name:'Embroidered Saree',     cat:'women',       price:2499, original:3999, path:'womens-dresses/2',    badge:'38% OFF'},
-  {id:3, name:'Slim Fit Chinos',       cat:'men',         price:1099, original:1799, path:'mens-shirts/1',       badge:'40% OFF'},
-  {id:4, name:'Classic Oxford Shirt',  cat:'men',         price:899,  original:1299, path:'mens-shirts/2',       badge:'30% OFF'},
-  {id:5, name:'Kids Party Dress',      cat:'kids',        price:899,  original:1499, path:'womens-dresses/3',    badge:'40% OFF'},
-  {id:6, name:'Boys Denim Jacket',     cat:'kids',        price:1199, original:1899, path:'tops/1',              badge:'37% OFF'},
-  {id:7, name:'Boho Maxi Dress',       cat:'women',       price:1599, original:2499, path:'womens-dresses/4',    badge:'36% OFF'},
-  {id:8, name:'Ethnic Sherwani',       cat:'men',         price:3499, original:5499, path:'mens-shirts/3',       badge:'36% OFF'},
-  {id:9, name:'Leather Tote Bag',      cat:'accessories', price:1299, original:1999, path:'womens-bags/1',       badge:'35% OFF'},
-  {id:10,name:'Silver Jhumka Set',     cat:'accessories', price:599,  original:999,  path:'womens-jewellery/1',  badge:'40% OFF'},
-  {id:11,name:'Casual Joggers',        cat:'men',         price:799,  original:1299, path:'mens-shirts/4',       badge:'38% OFF'},
-  {id:12,name:'Girls Lehenga Set',     cat:'kids',        price:1799, original:2999, path:'womens-dresses/5',    badge:'40% OFF'}
+  {id:1,  name:'Floral Kurti Set',     cat:'women',       price:1299, original:1999, badge:'35% OFF', apiCat:'womens-dresses',  apiIdx:0, img:null},
+  {id:2,  name:'Embroidered Saree',    cat:'women',       price:2499, original:3999, badge:'38% OFF', apiCat:'womens-dresses',  apiIdx:1, img:null},
+  {id:3,  name:'Slim Fit Chinos',      cat:'men',         price:1099, original:1799, badge:'40% OFF', apiCat:'mens-shirts',     apiIdx:0, img:null},
+  {id:4,  name:'Classic Oxford Shirt', cat:'men',         price:899,  original:1299, badge:'30% OFF', apiCat:'mens-shirts',     apiIdx:1, img:null},
+  {id:5,  name:'Kids Party Dress',     cat:'kids',        price:899,  original:1499, badge:'40% OFF', apiCat:'womens-dresses',  apiIdx:2, img:null},
+  {id:6,  name:'Boys Denim Jacket',    cat:'kids',        price:1199, original:1899, badge:'37% OFF', apiCat:'tops',            apiIdx:0, img:null},
+  {id:7,  name:'Boho Maxi Dress',      cat:'women',       price:1599, original:2499, badge:'36% OFF', apiCat:'womens-dresses',  apiIdx:3, img:null},
+  {id:8,  name:'Ethnic Sherwani',      cat:'men',         price:3499, original:5499, badge:'36% OFF', apiCat:'mens-shirts',     apiIdx:2, img:null},
+  {id:9,  name:'Leather Tote Bag',     cat:'accessories', price:1299, original:1999, badge:'35% OFF', apiCat:'womens-bags',     apiIdx:0, img:null},
+  {id:10, name:'Silver Jhumka Set',    cat:'accessories', price:599,  original:999,  badge:'40% OFF', apiCat:'womens-jewellery',apiIdx:0, img:null},
+  {id:11, name:'Casual Joggers',       cat:'men',         price:799,  original:1299, badge:'38% OFF', apiCat:'mens-shirts',     apiIdx:3, img:null},
+  {id:12, name:'Girls Lehenga Set',    cat:'kids',        price:1799, original:2999, badge:'40% OFF', apiCat:'womens-dresses',  apiIdx:4, img:null}
 ];
 
+const catEmoji={women:'👗',men:'👔',kids:'🎀',accessories:'👜'};
 let cart=[];
 let currentFilter='all';
 
-function productCard(p,small=false){
+function productCard(p){
   const pct=Math.round((1-p.price/p.original)*100);
+  const imgHtml=p.img
+    ?`<img src="${p.img}" alt="${p.name}" loading="lazy" style="width:100%;height:100%;object-fit:cover"/>`
+    :`<div style="width:100%;height:100%;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#fce4f3,#f8bbd9);font-size:3rem">${catEmoji[p.cat]||'👕'}</div>`;
   return `<div class="product-card">
     <div class="product-img-wrap">
-      <img src="${CDN}/${p.path}/1.webp" alt="${p.name}" loading="lazy" style="width:100%;height:100%;object-fit:cover" onerror="this.onerror=null;this.src='${CDN}/${p.path}/thumbnail.webp'"/>
+      ${imgHtml}
       <span class="product-badge">${p.badge}</span>
       <div class="wishlist-btn">♡</div>
     </div>
@@ -458,6 +461,7 @@ function renderProducts(filter='all',containerId='allProducts'){
 }
 
 function filterCat(btn,cat){
+  currentFilter=cat;
   document.querySelectorAll('.cat-btn').forEach(b=>b.classList.remove('active'));
   btn.classList.add('active');
   renderProducts(cat,'allProducts');
@@ -484,7 +488,7 @@ function updateCartUI(){
     document.getElementById('cartFooter').style.display='none';
   }else{
     ci.innerHTML=cart.map(i=>`<div class="cart-item">
-      <img src="${CDN}/${i.path}/thumbnail.webp" alt="${i.name}" style="width:60px;height:70px;object-fit:cover;border-radius:6px"/>
+      ${i.img?`<img src="${i.img}" alt="${i.name}" style="width:60px;height:70px;object-fit:cover;border-radius:6px"/>`:`<div style="width:60px;height:70px;border-radius:6px;background:linear-gradient(135deg,#fce4f3,#f8bbd9);display:flex;align-items:center;justify-content:center;font-size:1.5rem">${catEmoji[i.cat]||'👕'}</div>`}
       <div class="cart-item-info">
         <h4>${i.name}</h4>
         <p>₹${i.price.toLocaleString()} each</p>
@@ -538,8 +542,27 @@ document.querySelectorAll('.cat-btn').forEach(b=>b.addEventListener('click',func
   this.classList.add('active');
 }));
 
+async function fetchProductImages(){
+  const cats=[...new Set(products.map(p=>p.apiCat))];
+  const catData={};
+  await Promise.all(cats.map(async cat=>{
+    try{
+      const r=await fetch(`https://dummyjson.com/products/category/${cat}?limit=10`);
+      const d=await r.json();
+      catData[cat]=d.products||[];
+    }catch(e){catData[cat]=[];}
+  }));
+  products.forEach(p=>{
+    const list=catData[p.apiCat]||[];
+    if(list[p.apiIdx])p.img=list[p.apiIdx].thumbnail;
+  });
+  renderProducts('all','homeProducts');
+  renderProducts(currentFilter,'allProducts');
+}
+
 renderProducts('all','homeProducts');
 renderProducts('all','allProducts');
+fetchProductImages();
 </script>
 </body>
 </html>
